@@ -1,0 +1,26 @@
+1. Calculator - one of possible implementations for raised on interview question
+
+2.SmartHomeVerySimlify/SmartHomeSolution - part of model + part of command for one of own project + few examples of command usage
+
+Initial idea (some points):
+ - sorry, it's almost no comments, as it's my own project and hadn't time on it
+ - projects works with hardware located in network (in my case - in local wifi network, but also has internet access, so available out of home network);
+ - hardware part contains from different devices;
+ - all of them:
+     Device 1 ----\
+     Device 2 -----> [Software bridge with web api] [has url]
+     Device 3 ----/
+
+  with this [bridge] we can get list of devices, send commands to them, get information from them and so on
+  with own [Commands]
+  system control some amount of parameters. Parameters we receive with scheduled [Commands] 
+  system can react according to added list of rules on Parameters changes. Reactions - again [Commands]
+  that's why commands were design to be execute only but with ability to provide different results 
+
+
+ - to check please start with 'SmartHome.ApiCommandCalls' project - it has static class with an examples for execution some [Command] with implementing calls to web api bridge 
+ - Please pay attention on class BaseApiCommand - it implements 'generic call' to web api bridge. And All other commands in the implementation provides only types of request and response to web api bridge.
+ - Please also pay attention to class 'ServiceConsumer' - I like it :) Initially I developed it for integration tests for web api services (u can make calls to web services providing needed types of request and respons), 
+but then reused them in my smart home to implement [Command] with call to web api
+ 
+BTW, this soft already partyally works now, so I can show how it works in real life.
