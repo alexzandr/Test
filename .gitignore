@@ -1,47 +1,116 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.pdb
+*.exe
+*.o
+*.so
 
-# Folder config file
-Desktop.ini
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Xcode User Data
+######################
+*.xcuserdatad
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.ldf
+*.mdf
+*.dat
 
-# Windows shortcuts
-*.lnk
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# OS generated files #
+######################
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
+.DS_Store?
 ._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
 .Spotlight-V100
-.TemporaryItems
 .Trashes
-.VolumeIcon.icns
+ehthumbs.db
+*StyleCop.Cache
+UpgradeReport*
+UpgradeLog.*
+Thumbs.db
+UpgradeReport*
+UpgradeLog.*
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Other includes/excludes #
+###########################
+obj/
+*obj/
+bin/
+*bin/
+*.user
+*.suo
+Debug/
+Release/
+/com.kabbee/cache/*.bin
+/com.kabbee/cache/*.key
+/com.kabbee/cache/*.xml
+*.suo
+*Newtonsoft.Json.xml
+*Backup*/
+/com.kabbee/android/gen
+
+/com.kabbee/android/project.properties
+/com.kabbee/db/address/POI/London.geojson
+/com.kabbee/db/address/POI/London.png
+/com.kabbee/db/address/POI/Working Copy of London.geojson
+/com.kabbee/db/address/POI/airports/CityAirport.geojson
+/com.kabbee/db/address/POI/airports/Gatwick North.geojson
+/com.kabbee/db/address/POI/airports/Gatwick South.geojson
+/com.kabbee/db/address/POI/airports/Heathrow T1.geojson
+/com.kabbee/db/address/POI/airports/Heathrow T3.geojson
+/com.kabbee/db/address/POI/airports/Heathrow T4.geojson
+/com.kabbee/db/address/POI/airports/Heathrow T5.geojson
+/com.kabbee/db/address/POI/airports/Luton.geojson
+/com.kabbee/db/address/POI/airports/PNG/CityAirport.png
+/com.kabbee/db/address/POI/airports/PNG/Gatwick North.png
+/com.kabbee/db/address/POI/airports/PNG/Gatwick South.png
+/com.kabbee/db/address/POI/airports/PNG/Heathrow T1.png
+/com.kabbee/db/address/POI/airports/PNG/Heathrow T3.png
+/com.kabbee/db/address/POI/airports/PNG/Heathrow T4.png
+/com.kabbee/db/address/POI/airports/PNG/Heathrow T5.png
+/com.kabbee/db/address/POI/airports/PNG/Luton.png
+/com.kabbee/db/address/POI/airports/PNG/Stansted.png
+/com.kabbee/db/address/POI/airports/Stansted.geojson
+/com.kabbee/db/address/POI/stations/Charing Cross.geojson
+/com.kabbee/db/address/POI/stations/Euston.geojson
+/com.kabbee/db/address/POI/stations/FenchurchStreet.geojson
+/com.kabbee/db/address/POI/stations/KingsCross.geojson
+/com.kabbee/db/address/POI/stations/LiverpoolSt.geojson
+/com.kabbee/db/address/POI/stations/LondonBridge.geojson
+/com.kabbee/db/address/POI/stations/Marylebone.geojson
+/com.kabbee/db/address/POI/stations/PNG/Charing Cross.png
+/com.kabbee/db/address/POI/stations/PNG/Euston.png
+/com.kabbee/db/address/POI/stations/PNG/FenchurchStreet.png
+/com.kabbee/db/address/POI/stations/PNG/KingsCross.png
+/com.kabbee/db/address/POI/stations/PNG/LiverpoolSt.png
+/com.kabbee/db/address/POI/stations/PNG/LondonBridge.png
+/com.kabbee/db/address/POI/stations/PNG/Marylebone.png
+/com.kabbee/db/address/POI/stations/PNG/Paddington.png
+/com.kabbee/db/address/POI/stations/PNG/StPancras.png
+/com.kabbee/db/address/POI/stations/PNG/Victoria.png
+/com.kabbee/db/address/POI/stations/PNG/Waterloo.png
+/com.kabbee/db/address/POI/stations/Paddington.geojson
+/com.kabbee/db/address/POI/stations/StPancras.geojson
+/com.kabbee/db/address/POI/stations/Victoria.geojson
+/com.kabbee/db/address/POI/stations/Waterloo.geojson
+
+/com.kabbee/db/address/Final
+
+/com.kabbee/htdocs/packages/
