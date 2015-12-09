@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61E51B85-B293-4671-B020-CCF76A94F50B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartHome.Core</RootNamespace>
+    <AssemblyName>SmartHome.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\API\AddCodesApiCommand.cs" />
+    <Compile Include="Commands\API\BaseApiCommand.cs" />
+    <Compile Include="Commands\API\BaseCommand.cs" />
+    <Compile Include="Commands\API\DeleteCodeApiCommand.cs" />
+    <Compile Include="Commands\API\GetCodesListApiCommand.cs" />
+    <Compile Include="Commands\API\GetDevicesListApiCommand.cs" />
+    <Compile Include="Commands\API\GetLernedCodeApiCommand.cs" />
+    <Compile Include="Commands\API\RefreshDevicesApiCommand.cs" />
+    <Compile Include="Commands\API\SendCodeApiCommand.cs" />
+    <Compile Include="Commands\API\StartLearmApiCommand.cs" />
+    <Compile Include="Commands\API\TestApiCommand.cs" />
+    <Compile Include="Entities\Devices\Abstract\BaseDevice.cs" />
+    <Compile Include="Entities\Devices\Abstract\DeviceRequest.cs" />
+    <Compile Include="Entities\Devices\Abstract\RMBridgeBaseRequest.cs" />
+    <Compile Include="Entities\Data\RMDeviceCodeEntity.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\DeleteCodeRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\GetCodeRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\GetCodesListRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\GetRegiteredDevices.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\LearnCodeRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\SendCodeRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\AddCodesListRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\RefreshDeviceListRequest.cs" />
+    <Compile Include="Entities\Devices\API\APIRequests\TestApiRequest.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\AddCodesResponse.cs" />
+    <Compile Include="Entities\Devices\Abstract\BaseApiResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiCodeInformation.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\DeleteCodeResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\GetCodeResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\GetCodesListResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\GetRegDevicesResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\LearnCodeResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\SendCodeResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\SendCodesListResponse.cs" />
+    <Compile Include="Entities\Devices\API\ApiResponses\UpdateDeviceResponse.cs" />
+    <Compile Include="Entities\Devices\API\IApiCodeInformation.cs" />
+    <Compile Include="Entities\Devices\RmDevice.cs" />
+    <Compile Include="Helpers\ExtentionsHelper.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServicesHelper\SmartHome.Services.csproj">
+      <Project>{69dce940-5ef3-4542-8d11-575d1e12424c}</Project>
+      <Name>SmartHome.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
